@@ -105,6 +105,10 @@
     color: #FF0000;
 }
 
+.social-row i.fa-square-bluesky {
+    color: #0085FF;
+}
+
 .social-row i.fa-square-facebook {
     color: #1877F2;
 }
