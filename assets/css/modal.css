@@ -122,6 +122,11 @@ html[data-theme="dark"] .social-row i.fa-square-threads {
     color: var(--color-accent);
 }
 
+html[data-theme="dark"] .social-row i.fa-envelope,
+html[data-theme="dark"] .social-row i.fas {
+    color: #fff;
+}
+
 /* Smooth modal fade */
 @keyframes fadeIn {
     from {
