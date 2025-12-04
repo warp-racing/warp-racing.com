@@ -66,21 +66,22 @@ window.addEventListener("load", function () {
 function checkForLinksHash() {
 	const urlParams = new URLSearchParams(window.location.search);
 
-  if (urlParams.get('show_links') === "true") {
-	document.getElementById('social-modal').classList.add('open');
-  }
+  	if (urlParams.get('show_links') === "true") {
+		document.getElementById('social-modal').classList.add('open');
+  	}
 }
 
 document.addEventListener('DOMContentLoaded', checkForLinksHash);
 
 document.querySelector('.close-modal').addEventListener('click', () => {
-  document.getElementById('social-modal').classList.remove('open');
-  history.replaceState(null, '', window.location.pathname);
+  	document.getElementById('social-modal').classList.remove('open');
+	
+  	history.replaceState(null, '', window.location.pathname);
 });
 
-document.getElementById('social-modal').addEventListener('click', e => {
-  if (e.target.id === 'social-modal') {
-	document.getElementById('social-modal').classList.remove('open');
-	history.replaceState(null, '', window.location.pathname);
-  }
+document.getElementById('social-modal').addEventListener('click', event => {
+  	if (event.target.id === 'social-modal') {
+		document.getElementById('social-modal').classList.remove('open');
+		history.replaceState(null, '', window.location.pathname);
+  	}
 });
