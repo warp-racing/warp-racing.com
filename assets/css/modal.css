@@ -1,11 +1,17 @@
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.35);
+    /* slightly transparent so blur shows through */
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 9999;
+
+    /* Add blur */
+    backdrop-filter: blur(6px) brightness(50%);
+    -webkit-backdrop-filter: blur(6px);
+    /* for Safari */
 }
 
 .modal.open {
