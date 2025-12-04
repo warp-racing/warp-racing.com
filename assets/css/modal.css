@@ -113,6 +113,10 @@
     color: #000;
 }
 
+html[data-theme="dark"] .social-row i.fa-square-threads {
+    color: #fff;
+}
+
 .social-row i.fa-envelope,
 .social-row i.fas {
     color: var(--color-accent);
