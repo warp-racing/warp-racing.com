@@ -62,3 +62,23 @@ window.addEventListener("load", function () {
 
     copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
 })
+
+function checkForLinksHash() {
+  if (location.hash === '#links') {
+    document.getElementById('social-modal').classList.add('open');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', checkForLinksHash);
+
+document.querySelector('.close-modal').addEventListener('click', () => {
+  document.getElementById('social-modal').classList.remove('open');
+  history.replaceState(null, '', location.pathname);
+});
+
+document.getElementById('social-modal').addEventListener('click', e => {
+  if (e.target.id === 'social-modal') {
+    document.getElementById('social-modal').classList.remove('open');
+    history.replaceState(null, '', location.pathname);
+  }
+});

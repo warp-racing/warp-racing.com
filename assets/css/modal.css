@@ -1,0 +1,131 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 0;
+    border-radius: 14px;
+    max-width: 520px;
+    width: 92%;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* HEADER */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 1.6rem 1rem 1.6rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.28rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #666;
+    transition: colour 0.2s;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+/* BODY */
+.modal-body {
+    padding: 1.8rem 2rem 2.1rem 2rem;
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Rows */
+.social-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    colour: #222;
+    font-size: 1.1rem;
+    padding: 0.55rem 0.5rem;
+    border-radius: 8px;
+    transition: background 0.15s;
+}
+
+.social-row:hover {
+    background: #f7f7f7;
+}
+
+/* Icons */
+.social-row i {
+    font-size: 2.2rem;
+    width: 2.2rem;
+    text-align: centre;
+}
+
+/* Icon Colours */
+.social-row i.fa-square-instagram {
+    color: #F58529;
+}
+
+.social-row i.fa-square-linkedin {
+    color: #0A66C2;
+}
+
+.social-row i.fa-square-whatsapp {
+    color: #25D366;
+}
+
+.social-row i.fa-square-youtube {
+    color: #FF0000;
+}
+
+.social-row i.fa-square-facebook {
+    color: #1877F2;
+}
+
+.social-row i.fa-square-threads {
+    color: #000;
+}
+
+.social-row i.fa-envelope,
+.social-row i.fas {
+    color: #444;
+}
+
+/* Smooth modal fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
