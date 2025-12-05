@@ -19,7 +19,8 @@
     <script defer src="assets/js/global.js"></script>
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="34c0f985-73f0-4f79-a58e-33f5daa4d064"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script defer type="module"
+        src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
 </head>
 
 <body>
@@ -41,15 +42,10 @@
             <h1 class="hover-colour">CHAMPIONS</h1>
         </div>
 
-        <model-viewer src="assets/model-viewer/car.glb" camera-controls tone-mapping="commerce"
-            poster="assets/model-viewer/poster.png" shadow-intensity="1" disable-tap disable-pan auto-rotate
-            disable-zoom min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg 14.02m" exposure="1"
-            camera-orbit="42.71deg 70deg 14.02m" min-field-of-view="5deg" max-field-of-view="20deg"
-            interaction-prompt="none">
-            <div class="progress-bar hide" slot="progress-bar">
-                <div class="update-bar"></div>
-            </div>
-        </model-viewer>
+        <div id="embed">
+            <lite-youtube id="embed-inner" loading="lazy" posterquality="maxresdefault" nocookie
+                videoid="9sm-A-Tl7RQ"></lite-youtube>
+        </div>
     </div>
 
     <div class="side-by-side" id="we-are-team-warp">

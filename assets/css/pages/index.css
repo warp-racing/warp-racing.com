@@ -25,16 +25,20 @@
     text-align: right;
 }
 
-model-viewer {
+#embed {
     width: 50vw;
-    height: 100vh;
+    padding: 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#title-section model-viewer #ar-prompt {
+#embed #embed-inner {
+    width: 75%;
+}
+
+#title-section #embed#ar-prompt {
     display: none;
 }
 
@@ -59,11 +63,11 @@ model-viewer {
         padding-right: 10px;
     }
 
-    #title-section model-viewer {
+    #title-section #embed {
         width: 100%;
     }
 
-    #title-section model-viewer #ar-prompt {
+    #title-section #embed#ar-prompt {
         display: inline-block;
     }
 }
