@@ -10,7 +10,7 @@
 /* we-are-team-warp */
 
 #we-are-team-warp .left {
-    padding: 50px 10px 50px 0px;
+    padding: 50px 10px 25px 0px;
     width: 40%
 }
 
@@ -23,7 +23,7 @@
 }
 
 #we-are-team-warp .right {
-    padding: 50px 15px 50px 0px;
+    padding: 50px 15px 25px 0px;
 
     display: flex;
     flex-direction: column;
@@ -52,19 +52,22 @@
     align-items: center;
     gap: 25px;
 
-    margin-bottom: 10px;
+    margin: 20px 0px 10px 0px;
 }
 
 #supported-by .sponsor {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    /* forces the text to the bottom */
     align-items: center;
+
+    height: 100px;
+    /* or any value that fits your tallest logo */
 }
 
 #supported-by .sponsor img {
-    width: 200px;
-    height: 100px;
+    width: 150px;
 
     transition: transform 0.3s;
 }
@@ -76,6 +79,7 @@
 #supported-by .sponsor p {
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
 }
 
 html[data-theme="dark"] #supported-by .sponsor #aosom-logo {
@@ -86,6 +90,6 @@ html[data-theme="dark"] #supported-by .sponsor #ansys-logo {
     content: url(../../img/sponsors/logo-ansys-dark.svg);
 }
 
-html[data-theme="dark"] #supported-by .sponsor #regent-logo {
-    content: url(../../img/sponsors/logo-regent-dark.svg);
+html[data-theme="dark"] #supported-by .sponsor #filamentive-logo {
+    content: url(../../img/sponsors/logo-filamentive-dark.png);
 }
