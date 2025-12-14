@@ -94,47 +94,9 @@
     text-align: center;
 }
 
-/* Icon Colours */
-.social-row i.fa-square-instagram {
-    color: #E1306C;
-}
-
-.social-row i.fa-square-linkedin {
-    color: #0A66C2;
-}
-
-.social-row i.fa-square-whatsapp {
-    color: #25D366;
-}
-
-.social-row i.fa-square-youtube {
-    color: #FF0000;
-}
-
-.social-row i.fa-square-bluesky {
-    color: #0085FF;
-}
-
-.social-row i.fa-square-facebook {
-    color: #1877F2;
-}
-
-.social-row i.fa-square-threads {
-    color: #000;
-}
-
-html[data-theme="dark"] .social-row i.fa-square-threads {
-    color: #fff;
-}
-
 .social-row i.fa-envelope,
 .social-row i.fas {
     color: var(--color-accent);
-}
-
-html[data-theme="dark"] .social-row i.fa-envelope,
-html[data-theme="dark"] .social-row i.fas {
-    color: #fff;
 }
 
 /* Smooth modal fade */

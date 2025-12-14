@@ -1,4 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap");
+/* Fonts */
+
+/* noto-sans-300 - greek_latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/noto-sans-v42-greek_latin-300.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* noto-sans-regular - greek_latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/noto-sans-v42-greek_latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* noto-sans-italic - greek_latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/noto-sans-v42-greek_latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* noto-sans-600 - greek_latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/noto-sans-v42-greek_latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 :root {
     --accent: #9195ff;
@@ -9,24 +53,6 @@
     --opposite-color-accent: #000;
 
     --navbar-height-mobile: 180px;
-}
-
-html[data-theme="light"] {
-    --accent: #9195ff;
-    --accent-darker: #474ba5;
-    --background-color: #fff;
-    --color-accent: #3b3b40;
-    --darker-color-accent: #000;
-    --opposite-color-accent: #000;
-}
-
-html[data-theme="dark"] {
-    --accent: #9195ff;
-    --accent-darker: #474ba5;
-    --background-color: #1d1d1f;
-    --color-accent: #3b3b40;
-    --darker-color-accent: #000;
-    --opposite-color-accent: #fff;
 }
 
 * {
@@ -204,4 +230,64 @@ p {
     .side-by-side .right {
         flex: 1;
     }
+}
+
+/* Social Media Icons Font */
+
+@font-face {
+    font-family: social-media-icons;
+    src: url(../fonts/social-media-icons.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fontello-icon {
+    font-family: "social-media-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon classes - Add all the icons from your Fontello set */
+.icon-mail:before {
+    content: '\e800';
+}
+
+.icon-bluesky:before {
+    content: '\e801';
+}
+
+.icon-threads:before {
+    content: '\e802';
+}
+
+.icon-facebook:before {
+    content: '\f09a';
+}
+
+.icon-linkedin:before {
+    content: '\f0e1';
+}
+
+.icon-youtube-play:before {
+    content: '\f16a';
+}
+
+.icon-instagram:before {
+    content: '\f16d';
+}
+
+.icon-whatsapp:before {
+    content: '\f232';
 }

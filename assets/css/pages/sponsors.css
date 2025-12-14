@@ -81,15 +81,3 @@
     font-weight: 400;
     text-align: center;
 }
-
-html[data-theme="dark"] #supported-by .sponsor #aosom-logo {
-    content: url(../../img/sponsors/logo-aosom-dark.svg);
-}
-
-html[data-theme="dark"] #supported-by .sponsor #ansys-logo {
-    content: url(../../img/sponsors/logo-ansys-dark.svg);
-}
-
-html[data-theme="dark"] #supported-by .sponsor #filamentive-logo {
-    content: url(../../img/sponsors/logo-filamentive-dark.png);
-}
