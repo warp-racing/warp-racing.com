@@ -88,24 +88,29 @@
 /* image-carousel */
 
 .image-carousel {
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.image-carousel-track {
     display: flex;
-    flex-direction: row;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
+    width: max-content;
+    will-change: transform;
 }
 
-.image-carousel .carousel-item {
-    display: inline-block;
-
-    height: 300px;
+.carousel-item {
+    flex: 0 0 auto;
 }
 
-.image-carousel .carousel-item:hover {
-    cursor: pointer;
-}
-
-.image-carousel .carousel-item img {
+.carousel-item img {
     height: 300px;
     width: auto;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.image-carousel:hover {
+    cursor: pointer;
 }
