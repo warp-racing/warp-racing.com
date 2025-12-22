@@ -1,6 +1,7 @@
 var entryClassCarImage;
 var devClassCarImage;
 var devClassCarImageNats;
+var proClassCarImage;
 var carSlide = 0;
 
 function debounce(fn, delay = 250) {
@@ -58,12 +59,17 @@ function createCarousel({ element, imagePath, imageCount, speed = 0.4 }) {
         track.appendChild(item);
     }
 
-    /* click -> full image */
-    Array.from(track.children).forEach((item, i) => {
-        item.addEventListener('click', () => {
-            window.open(`${imagePath}/${i + 1}.jpg`, '_blank');
-        });
+    track.addEventListener('click', e => {
+        const item = e.target.closest('.carousel-item');
+        if (!item) return;
+
+        const items = Array.from(track.children);
+        const index = items.indexOf(item);
+        const indexMod = index % imageCount;
+
+        window.open(`${imagePath}/${indexMod + 1}.jpg`, '_blank');
     });
+
 
     /* safe fill */
     const safeFill = debounce(() => fillTrack(track), 300);
@@ -133,6 +139,8 @@ function changeCar() {
         `url(../assets/img/dev-class-car/${carSlide}.webp)`;
     devClassCarImageNats.style.backgroundImage =
         `url(../assets/img/dev-class-car/${carSlide}-nats.webp)`;
+    proClassCarImage.style.backgroundImage =
+        `url(../assets/img/pro-class-car/${carSlide}.webp)`;
 
     setTimeout(changeCar, 5000);
 }
@@ -141,11 +149,13 @@ window.addEventListener('load', () => {
     entryClassCarImage = document.getElementById('entry-class-car-image');
     devClassCarImage = document.getElementById('dev-class-car-image');
     devClassCarImageNats = document.getElementById('dev-class-car-image-nats');
+    proClassCarImage = document.getElementById('pro-class-car-image');
 
     /* preload car images */
     preloadImages('../assets/img/entry-class-car', 4);
     preloadImages('../assets/img/dev-class-car', 4);
     preloadImages('../assets/img/dev-class-car', 4, '-nats.webp');
+    preloadImages('../assets/img/pro-class-car', 4);
 
     /* carousels */
     const carousels = [
@@ -158,6 +168,11 @@ window.addEventListener('load', () => {
             id: 'dev-class-2024_uk-nationals',
             path: '../assets/img/our-journey/dev-class-2024_uk-nationals',
             count: 11
+        },
+        {
+            id: 'pro-class-2026_london-south-regionals',
+            path: '../assets/img/our-journey/pro-class-2026_london-south-regionals',
+            count: 8
         }
     ];
 
