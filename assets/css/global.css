@@ -116,7 +116,7 @@ p {
 
 /* gradient-text */
 
-.gradient-text-fillgradient-text- {
+.gradient-text-fill {
     background: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
     background-clip: text;
 
