@@ -264,10 +264,6 @@ p {
     content: '\e800';
 }
 
-.icon-bluesky:before {
-    content: '\e801';
-}
-
 .icon-threads:before {
     content: '\e802';
 }
