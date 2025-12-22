@@ -116,7 +116,7 @@ p {
 
 /* gradient-text */
 
-.gradient-text {
+.gradient-text-fillgradient-text- {
     background: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
     background-clip: text;
 
@@ -127,6 +127,15 @@ p {
 
     background-size: 100%;
     background-repeat: repeat;
+}
+
+/* gradient-text */
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
+    color: var(--background-color);
+
+    padding: 0.25em;
 }
 
 /* hover-colour */
