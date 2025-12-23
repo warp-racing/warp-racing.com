@@ -273,6 +273,10 @@ p {
     content: '\e800';
 }
 
+.icon-gofundme:before {
+    content: '\e801';
+}
+
 .icon-threads:before {
     content: '\e802';
 }
