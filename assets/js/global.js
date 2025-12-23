@@ -67,11 +67,10 @@ function checkForLinksHash() {
 	const url = new URL(window.location.href);
 	const params = url.searchParams;
 
-	if (params.get('l') === '1') {
-		params.delete('l');
+	// Handle #l
+	if (url.hash === '#l') {
+		url.hash = '';
 		params.set('show_links', 'true');
-
-		// Update the URL without reloading the page
 		window.history.replaceState({}, '', url.toString());
 	}
 
@@ -79,8 +78,5 @@ function checkForLinksHash() {
 		document.getElementById('social-modal')?.classList.add('open');
 	}
 }
-
-document.addEventListener('DOMContentLoaded', checkForLinksHash);
-
 
 document.addEventListener('DOMContentLoaded', checkForLinksHash);
