@@ -64,11 +64,23 @@ window.addEventListener("load", function () {
 })
 
 function checkForLinksHash() {
-	const urlParams = new URLSearchParams(window.location.search);
+	const url = new URL(window.location.href);
+	const params = url.searchParams;
 
-	if (urlParams.get('show_links') === "true") {
-		document.getElementById('social-modal').classList.add('open');
+	if (params.get('l') === '1') {
+		params.delete('l');
+		params.set('show_links', 'true');
+
+		// Update the URL without reloading the page
+		window.history.replaceState({}, '', url.toString());
+	}
+
+	if (params.get('show_links') === 'true') {
+		document.getElementById('social-modal')?.classList.add('open');
 	}
 }
+
+document.addEventListener('DOMContentLoaded', checkForLinksHash);
+
 
 document.addEventListener('DOMContentLoaded', checkForLinksHash);
