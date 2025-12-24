@@ -77,6 +77,16 @@ function checkForLinksHash() {
 	if (params.get('show_links') === 'true') {
 		document.getElementById('social-modal')?.classList.add('open');
 	}
+
+	const script = document.createElement('script');
+	script.src = "https://gauravkrp.com/snowify.min.js";
+
+	script.onload = () => {
+		initSnowify();
+	};
+
+	document.head.appendChild(script);
+
 }
 
 document.addEventListener('DOMContentLoaded', checkForLinksHash);
