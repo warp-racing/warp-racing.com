@@ -285,6 +285,10 @@ p {
     content: "\e803";
 }
 
+.icon-f1:before {
+    content: '\e804';
+}
+
 .icon-facebook:before {
     content: '\f09a';
 }
